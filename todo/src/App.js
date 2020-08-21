@@ -21,18 +21,18 @@ function App() {
     <div>
       <TodoList tasks={state} dispatch={dispatch} />
       <form>
-        <label>Add Todo: </label>
+        <label>New Task: </label>
         <input 
           type='text' 
-          name="item"
+          name='task'
           value={todo}
           onChange={handleChange}
         />
       </form>
       <button onClick={() => {dispatch({type: ADD_TODO, payload: todo})}}>
-        Add Todo</button>
+        Add Task</button>
       <button onClick={() => {dispatch({type: CLEAR_COMPLETED});}}>
-        Clear Completed</button>
+        Clear Selected</button>
     </div>
   );
 }
